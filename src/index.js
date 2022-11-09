@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Glean from '@mozilla/glean/web';
+
+const APP_NAME = 'bruno-react-app';
+
+Glean.setLogPings(true);
+Glean.setDebugViewTag(APP_NAME);
+Glean.initialize(APP_NAME, true);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
